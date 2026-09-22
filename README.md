@@ -35,7 +35,7 @@ Rabies is a 100% preventable viral disease if timely post-exposure prophylaxis i
     * 🇮🇳 **Telugu (తెలుగు)**
 * **🔒 100% Offline & Privacy-First**:
   * Operates completely offline without requiring internet access or network permissions.
-  * All vaccination schedule data remains strictly on the user's local device inside an encrypted Room database (`AppDatabase`).
+  * All vaccination schedule data remains strictly on the user's local device inside a Room database (`AppDatabase`).
 * **🎨 Customization & Accessibility**:
   * Material 3 dynamic color schemes with System, Force Light, and Force Dark mode toggles.
   * In-app font scaling controls ($12\text{ sp}$ to $21\text{ sp}$) for enhanced legibility.
