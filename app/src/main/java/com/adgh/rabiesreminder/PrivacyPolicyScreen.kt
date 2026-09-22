@@ -14,11 +14,19 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.navigation.NavHostController
-import com.adgh.rabiesreminder.ui.components.EmailText
 import com.adgh.rabiesreminder.ui.components.ExpandableSection
 import com.adgh.rabiesreminder.ui.components.MgButton
 import com.adgh.rabiesreminder.ui.components.MgText
 
+/**
+ * Composable screen rendering expandable sections detailing the Rabies Reminder application privacy policy.
+ *
+ * Explains offline device data storage, zero internet analytics and user data control.
+ *
+ * @param base Base typography font size.
+ * @param context Android context for launching browser and email intents.
+ * @param navController Navigation controller used to pop the backstack.
+ */
 @Composable
 fun PrivacyPolicyScreen(
     base: TextUnit,
@@ -172,30 +180,6 @@ fun PrivacyPolicyScreen(
             }
         }
 
-        item {
-            ExpandableSection("9. CONTACT", base) {
-                EmailText(
-                    "rajeev.a@aiimsmangalagiri.edu.in",
-                    base
-                )
-                MgText(
-                    text = "Dr. Rajeev A",
-                    basicFontSize = base
-                )
-                MgText(
-                    text = "Department of Community and Family Medicine",
-                    basicFontSize = base
-                )
-                MgText(
-                    text = "AIIMS Mangalagiri",
-                    basicFontSize = base
-                )
-                MgText(
-                    text = "Andhra Pradesh, India",
-                    basicFontSize = base
-                )
-            }
-        }
         item {
             MgButton(
                 text = "View online",

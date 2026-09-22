@@ -28,13 +28,26 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
 
+/**
+ * Composable component that calculates vaccination dose dates and configures alarm entries.
+ *
+ * Supports both Intra-dermal (Days 0, 3, 7, 28) and Intra-muscular (Days 0, 3, 7, 14, 28) regimens.
+ * Inserts records into Room via [ReminderUiStateHolder] and registers exact alarms via [setMgAlarm].
+ *
+ * @param currentSchedule Selected PEP schedule protocol ([PEPSchedule.IntraDermal] or [PEPSchedule.IntraMuscular]).
+ * @param baseLong Base Day 0 starting timestamp in milliseconds.
+ * @param basicFontSize Scalable typography font size.
+ * @param uiHolder View model state holder for reminder database operations.
+ * @param onConfirm Callback triggered when schedule confirmation is finalized.
+ * @param context Android context.
+ */
 @Composable
 fun ManageNewSchedule(
     currentSchedule: PEPSchedule, baseLong: Long, basicFontSize: TextUnit, uiHolder: ReminderUiStateHolder, onConfirm: () -> Unit,
     context: Context
 ) {
     val coroutineScope = rememberCoroutineScope()
-    
+
     when (currentSchedule) {
         PEPSchedule.IntraDermal -> {
             var isConfirmAlertDialogueShown by rememberSaveable {
@@ -420,3 +433,4 @@ fun ManageNewSchedule(
         }
     }
 }
+

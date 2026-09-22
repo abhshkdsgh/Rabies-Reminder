@@ -67,6 +67,19 @@ import com.adgh.rabiesreminder.ui.components.MgButton
 import com.adgh.rabiesreminder.ui.components.MgText
 import com.adgh.rabiesreminder.ui.theme.AppColors
 
+/**
+ * Root composable scaffold managing the primary application frame, top app bar, bottom navigation bar,
+ * floating action buttons, theme switching, dynamic font scaling, multi-language locale selection,
+ * permissions status banners, and navigation routing between app screens.
+ *
+ * @param modifier Custom modifier applied to the root scaffold.
+ * @param uiHolder View model managing reminder database state.
+ * @param sharedPref Preferences used to persist theme, font size, and language settings.
+ * @param onThemeChange Callback invoked when the user updates the color mode.
+ * @param context Android context for permission and locale updates.
+ * @param activity Target [MainActivity] for exit dialog confirmation.
+ * @return Int representing the updated theme preference integer (0 = System, 1 = Light, 2 = Dark).
+ */
 @SuppressLint("ConfigurationScreenWidthHeight")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -883,6 +896,17 @@ fun homeScaffold(
     return currentTheme
 }
 
+/**
+ * Custom small top app bar component displaying title, navigation icon, and actions menu.
+ *
+ * @param title Composable content rendered as the app bar title.
+ * @param modifier Layout modifier.
+ * @param navigationIcon Optional navigation icon composable slot.
+ * @param actions Optional action items composable slot.
+ * @param backgroundColor Background color of the top bar surface.
+ * @param contentColor Tint color for text and icons inside the top bar.
+ * @param elevation Surface tonal and shadow elevation.
+ */
 @Composable
 fun SmallTopAppBar(
     title: @Composable ()->Unit,

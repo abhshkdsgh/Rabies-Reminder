@@ -14,6 +14,14 @@ import androidx.compose.ui.unit.dp
 import com.adgh.rabiesreminder.ui.components.InfoCard
 import com.adgh.rabiesreminder.ui.components.MgText
 
+/**
+ * Composable screen rendering the Rabies Awareness and Educational Leaflet.
+ *
+ * Displays medical facts on rabies viral infection, vectors, exposure categories (Cat I, II, III),
+ * immediate first-aid wound care steps, post-exposure prophylaxis (PEP) treatment schedules, and prevention guidelines.
+ *
+ * @param basicFontSize Scalable typography font size.
+ */
 @Composable
 fun RabiesInfoLeaflet(
     basicFontSize: TextUnit

@@ -13,6 +13,11 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.adgh.rabiesreminder.ui.components.MgText
 
+/**
+ * Composable screen rendering open-source project credits and developer acknowledgment.
+ *
+ * @param basicFontSize Scalable base font size for UI typography elements.
+ */
 @Composable
 fun CreditsPage(
     basicFontSize: TextUnit

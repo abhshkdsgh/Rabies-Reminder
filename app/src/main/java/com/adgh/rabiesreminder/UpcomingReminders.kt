@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.CircularProgressIndicator
@@ -30,6 +31,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalLocale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -46,9 +48,18 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Date
 import java.util.Locale
-import androidx.compose.foundation.lazy.items
-import androidx.compose.ui.platform.LocalLocale
 
+/**
+ * Main reminders screen composable presenting stored vaccination schedule records grouped by date.
+ *
+ * Provides filter options ("Upcoming" vs "All"), toggle switches for muting/unmuting individual alarms,
+ * deletion confirmation dialogs, and permission status checks.
+ *
+ * @param uiHolder ViewModel managing reminder UI state flow.
+ * @param onCreate Callback navigating to the schedule creation screen.
+ * @param basicFontSize Scalable typography font size.
+ * @param context Android context for alarm setting and cancellation.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UpcomingRemindersScreen(uiHolder: ReminderUiStateHolder, onCreate: () -> Unit, basicFontSize: TextUnit, context: Context) {

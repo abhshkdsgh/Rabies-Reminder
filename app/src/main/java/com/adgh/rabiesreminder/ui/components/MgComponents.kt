@@ -1,6 +1,5 @@
 package com.adgh.rabiesreminder.ui.components
 
-import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
@@ -54,7 +53,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.net.toUri
 import com.adgh.rabiesreminder.MgRecord
 import com.adgh.rabiesreminder.PEPSchedule
 import com.adgh.rabiesreminder.R
@@ -66,6 +64,16 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
+/**
+ * Custom scalable text component supporting font size scaling multiplier, bold weighting, and centering.
+ *
+ * @param modifier Layout modifier.
+ * @param text Content string to display.
+ * @param basicFontSize Base scalable typography font size.
+ * @param times Multiplier applied to [basicFontSize].
+ * @param isBold `true` for heavy/bold weight, `false` for normal weight.
+ * @param color Text color tint.
+ */
 @Composable
 fun MgText(
     modifier: Modifier = Modifier,
@@ -86,6 +94,19 @@ fun MgText(
     )
 }
 
+/**
+ * Reusable outlined text field component styled for the app design language.
+ *
+ * @param value Text input value.
+ * @param onValueChange Callback invoked when text input changes.
+ * @param label Text field label string.
+ * @param basicFontSize0 Base typography font size.
+ * @param modifier Layout modifier.
+ * @param visualTransformation Visual transformation (e.g. password masking).
+ * @param keyboardOptions Keyboard options configuration.
+ * @param trailingIcon Optional trailing icon composable.
+ * @param readOnly `true` if field is read-only (e.g. dropdown triggers).
+ */
 @Composable
 fun MgTextField(
     value: String,
@@ -115,6 +136,16 @@ fun MgTextField(
     )
 }
 
+/**
+ * Custom outlined button component taking a simple string label.
+ *
+ * @param onClick Click handler callback.
+ * @param modifier Layout modifier.
+ * @param enabled Enabled state boolean.
+ * @param basicFontSize Scalable base font size.
+ * @param isPaddingForced `true` to enforce standard container padding.
+ * @param text String label displayed on the button.
+ */
 @Composable
 fun MgButton(
     onClick: () -> Unit,
@@ -140,6 +171,16 @@ fun MgButton(
     }
 }
 
+/**
+ * Custom outlined button component taking a composable slot for content.
+ *
+ * @param onClick Click handler callback.
+ * @param modifier Layout modifier.
+ * @param enabled Enabled state boolean.
+ * @param basicFontSize Scalable base font size.
+ * @param isPaddingForced `true` to enforce vertical container padding.
+ * @param text Composable content slot rendered inside the button.
+ */
 @Composable
 fun MgButton(
     onClick: () -> Unit,
@@ -162,6 +203,19 @@ fun MgButton(
     }
 }
 
+/**
+ * Reusable alert dialog supporting title, message, confirmation, and optional rejection buttons.
+ *
+ * @param showDialog `true` if the dialog is visible.
+ * @param onDismissRequest Callback invoked when clicking outside or pressing back.
+ * @param onConfirmation Callback invoked when tapping the positive action button.
+ * @param onReject Callback invoked when tapping the dismiss button.
+ * @param title Dialog title string.
+ * @param message Dialog body message text.
+ * @param confirmString Confirmation button label string.
+ * @param dismissString Optional rejection button label string.
+ * @param basicFontSize Scalable typography font size.
+ */
 @Composable
 fun MgAlertDialogue(
     showDialog: Boolean,
@@ -203,25 +257,9 @@ fun MgAlertDialogue(
     }
 }
 
-@Composable
-fun EmailText(email: String, base: TextUnit) {
-    val context = LocalContext.current
-
-    Text(
-        text = email,
-        fontSize = base,
-        textAlign = TextAlign.Center,
-        color = Color.Blue,
-        modifier = Modifier.clickable {
-            val intent = Intent(Intent.ACTION_SENDTO).apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                data = "mailto:$email".toUri()
-            }
-            context.startActivity(intent)
-        }
-    )
-}
-
+/**
+ * Welcome information banner card displayed at the top of the reminders overview screen.
+ */
 @Composable
 fun InfoCard() {
     Surface {
@@ -259,6 +297,14 @@ fun InfoCard() {
     }
 }
 
+/**
+ * Educational information card card displaying an icon, title, and detailed explanation text.
+ *
+ * @param title Section title string.
+ * @param icon Emoji or text icon symbol.
+ * @param content Informational text body.
+ * @param basicFontSize Scalable typography font size.
+ */
 @Composable
 fun InfoCard(title: String, icon: String, content: String, basicFontSize: TextUnit) {
     Card(
@@ -276,6 +322,14 @@ fun InfoCard(title: String, icon: String, content: String, basicFontSize: TextUn
     }
 }
 
+/**
+ * Composable placeholder shown when no vaccination reminders exist in the database or active filter.
+ *
+ * @param basicFontSize Scalable typography font size.
+ * @param onCreate Callback to navigate to schedule creation screen.
+ * @param showAllEntries Callback to switch filter to show all entries.
+ * @param isAllEntriesSelected `true` if "All" filter is currently active.
+ */
 @Composable
 fun EmptyState(
     basicFontSize: TextUnit,
@@ -313,6 +367,16 @@ fun EmptyState(
     }
 }
 
+/**
+ * Row component providing checkbox controls for configuring same-day and pre-reminder (2 days before) alarms.
+ *
+ * @param basicFontSize Scalable typography font size.
+ * @param xOn Injection day alarm toggle state.
+ * @param pXOn Pre-reminder alarm toggle state.
+ * @param xOnChanged Callback when injection day alarm state changes.
+ * @param pXOnChanged Callback when pre-reminder alarm state changes.
+ * @param isTodayOrFuture `true` if the vaccination date is today or in the future.
+ */
 @Composable
 fun AlarmEntry(
     basicFontSize: TextUnit,
@@ -374,6 +438,13 @@ fun AlarmEntry(
     }
 }
 
+/**
+ * Collapsible UI section component that expands or hides detailed content on click.
+ *
+ * @param title Section header title text.
+ * @param base Base typography font size.
+ * @param content Composable slot containing inner expandable content.
+ */
 @Composable
 fun ExpandableSection(
     title: String,
@@ -408,6 +479,14 @@ fun ExpandableSection(
     }
 }
 
+/**
+ * Card component displaying a single vaccination reminder record with active toggle switch and delete button.
+ *
+ * @param reminder The [MgRecord] instance to display.
+ * @param onToggle Callback when active status toggle state changes.
+ * @param onDelete Callback when delete action is triggered.
+ * @param basicFontSize Scalable typography font size.
+ */
 @Composable
 fun ReminderCard(reminder: MgRecord, onToggle: (Boolean) -> Unit, onDelete: () -> Unit, basicFontSize: TextUnit) {
     Surface{
@@ -496,6 +575,11 @@ fun ReminderCard(reminder: MgRecord, onToggle: (Boolean) -> Unit, onDelete: () -
     }
 }
 
+/**
+ * Calculates a timestamp in milliseconds since epoch representing today's date at 7:00 AM (07:00:00.000).
+ *
+ * @return Epoch time in milliseconds for today at 7 AM.
+ */
 fun today7amLong(): Long {
     val calendar = Calendar.getInstance()
     calendar.set(Calendar.HOUR_OF_DAY, 7)
@@ -504,3 +588,4 @@ fun today7amLong(): Long {
     calendar.set(Calendar.MILLISECOND, 0)
     return calendar.timeInMillis
 }
+

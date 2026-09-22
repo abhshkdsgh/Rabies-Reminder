@@ -16,8 +16,24 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.adgh.rabiesreminder.ui.theme.RabiesReminderTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Main [ComponentActivity] for the Rabies Reminder application.
+ *
+ * Serves as the single-activity entry point for the user interface. On launch, it creates
+ * the notification channel, enables edge-to-edge drawing, stops any ringing alarm sounds,
+ * loads theme preferences from [android.content.SharedPreferences], and sets up the root
+ * Jetpack Compose composable [homeScaffold].
+ *
+ * Annotated with [@AndroidEntryPoint][AndroidEntryPoint] for Hilt dependency injection support.
+ */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    /**
+     * Initializes the activity, notification channel, theme preferences, and Jetpack Compose content view.
+     *
+     * @param savedInstanceState Bundle containing saved instance state, if available.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         createNotificationChannel(this@MainActivity)
@@ -56,3 +72,4 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+

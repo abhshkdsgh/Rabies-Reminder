@@ -31,6 +31,9 @@ import androidx.core.net.toUri
 import com.adgh.rabiesreminder.ui.components.MgText
 import com.adgh.rabiesreminder.ui.components.MgTextField
 
+/**
+ * List of supported application languages mapped from BCP-47 language codes to display names.
+ */
 val supportedLanguages = listOf(
     "en" to "English",
     "hi" to "Hindi",
@@ -40,6 +43,14 @@ val supportedLanguages = listOf(
     "te" to "Telugu"
 )
 
+/**
+ * Composable dropdown selection field for choosing between Intra-dermal and Intra-muscular PEP schedules.
+ *
+ * @param value Currently selected display text.
+ * @param options List of schedule type display strings.
+ * @param basicFontSize Typography scale font size.
+ * @param onSelected Callback emitting the selected option index.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ExposedDropdown(
@@ -87,6 +98,16 @@ fun ExposedDropdown(
     }
 }
 
+/**
+ * Composable rendering a schedule preview layout for configuring alarm toggles and confirming creation.
+ *
+ * @param selectedIndex Selected schedule index (0 for Intra-Dermal, 1 for Intra-Muscular).
+ * @param baseLong Base starting vaccination date timestamp in milliseconds.
+ * @param onConfirm Callback invoked when schedule confirmation completes.
+ * @param basicFontSize Typography font size scale.
+ * @param uiHolder View model state holder for reminders.
+ * @param context Android context.
+ */
 @Composable
 fun SchedulePreview(
     selectedIndex: Int,
@@ -112,8 +133,14 @@ fun SchedulePreview(
     }
 }
 
+/** Request code constant for runtime notification permission requests. */
 const val permissionRequestCodeNotification = 300
 
+/**
+ * Requests POST_NOTIFICATIONS runtime permission on Android 13+ (API level 33).
+ *
+ * @param activity Target [MainActivity] launching the permission request dialog.
+ */
 fun requestNotificationPermission(activity: MainActivity) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         ActivityCompat.requestPermissions(
@@ -124,6 +151,11 @@ fun requestNotificationPermission(activity: MainActivity) {
     }
 }
 
+/**
+ * Creates the high-importance notification channel used by the app for dose alarms.
+ *
+ * @param context Android context.
+ */
 fun createNotificationChannel(context: Context) {
     val name: CharSequence = context.getString(R.string.channel_name)
     val description = context.getString(R.string.channel_description)
@@ -134,6 +166,11 @@ fun createNotificationChannel(context: Context) {
     notificationManager.createNotificationChannel(channel)
 }
 
+/**
+ * Directs the user to system settings to enable exact alarm scheduling on Android 12+ (API level 31).
+ *
+ * @param context Android context.
+ */
 fun requestExactAlarmPermission(context: Context) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
         val alarmManager = context.getSystemService(AlarmManager::class.java)
@@ -146,6 +183,12 @@ fun requestExactAlarmPermission(context: Context) {
     }
 }
 
+/**
+ * Checks if notification permissions and notification settings are enabled for this app.
+ *
+ * @param context Android context.
+ * @return `true` if notifications can be posted, `false` otherwise.
+ */
 fun areNotificationsEnabled(context: Context): Boolean {
     if (!NotificationManagerCompat.from(context).areNotificationsEnabled()) {
         return false
@@ -161,6 +204,12 @@ fun areNotificationsEnabled(context: Context): Boolean {
     return true
 }
 
+/**
+ * Checks whether the application holds permission to schedule exact alarms.
+ *
+ * @param context Android context.
+ * @return `true` if exact alarm capability is present or unnecessary (pre-Android 12).
+ */
 fun hasExactAlarmPermission(context: Context): Boolean {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
         val alarmManager = context.getSystemService(AlarmManager::class.java)
@@ -170,6 +219,14 @@ fun hasExactAlarmPermission(context: Context): Boolean {
     }
 }
 
+/**
+ * Formats an integer dose sequence number into a localized ordinal string representation.
+ *
+ * Supports special suffixes for Hindi, Telugu, Tamil, Malayalam, Kannada, and English fallback.
+ *
+ * @param context Context used to retrieve resource configuration language.
+ * @return Formatted ordinal string (e.g. "1st", "2nd", "3rd", "1st-equivalent in target language").
+ */
 fun Int.toOrdinal(context: Context): String {
     val lang = context.resources.configuration.locales[0].language
 
@@ -190,3 +247,4 @@ fun Int.toOrdinal(context: Context): String {
         }
     }
 }
+

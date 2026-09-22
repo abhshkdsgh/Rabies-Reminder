@@ -34,7 +34,18 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-
+/**
+ * Composable screen for creating and configuring new anti-rabies vaccination schedules.
+ *
+ * Allows users to choose the schedule protocol (Intra-dermal or Intra-muscular), select the starting Day 0
+ * vaccination date using a constrained date picker, and preview individual dose alarm toggles.
+ *
+ * @param onConfirm Callback executed when schedule configuration is saved and alarms are set.
+ * @param uiHolder View model handling database records and state flow.
+ * @param basicFontSize Scalable base font size for UI components.
+ * @param context Android context.
+ * @param selectedLanguage Currently active BCP-47 language tag string for localizing date formats.
+ */
 @Composable
 fun CreateScheduleScreen(
     onConfirm: () -> Unit,

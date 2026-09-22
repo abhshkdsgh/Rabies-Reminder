@@ -9,6 +9,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+/**
+ * Color constants and palette definitions used across the Rabies Reminder application theme.
+ */
 object AppColors {
     val Primary = Color(0xFF1565C0)       // deep blue
     val Accent = Color(0xFF00BFA5)        // teal
@@ -27,6 +30,12 @@ object AppColors {
     val DarkDestructive = Color(0xFFFF8A80)
 }
 
+/**
+ * Computes an appropriate contrasting content color (Black or White) based on the background color luminance.
+ *
+ * @param backgroundColor Target background color.
+ * @return [Color.Black] for light backgrounds, [Color.White] for dark backgrounds.
+ */
 fun contentColorFor(backgroundColor: Color): Color {
     return if (backgroundColor.luminance() > 0.5f) {
         Color.Black
@@ -68,6 +77,12 @@ private val AppTypography = Typography(
     bodySmall = androidx.compose.ui.text.TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Normal, fontSize = 12.sp)
 )
 
+/**
+ * Root theme composable wrapping application content with Material 3 styling, custom colors, and typography.
+ *
+ * @param darkTheme `true` for dark color scheme, `false` for light color scheme. Defaults to system configuration.
+ * @param content Composable UI subtree.
+ */
 @Composable
 fun RabiesReminderTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

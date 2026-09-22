@@ -13,8 +13,20 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
+/**
+ * [BroadcastReceiver] invoked when an exact alarm scheduled via [android.app.AlarmManager] triggers.
+ *
+ * Builds and posts a high-priority heads-up notification, initiates alarm audio playback
+ * (for same-day injection reminders), and provides "Stop" action pending intents.
+ */
 class ReminderReceiver : BroadcastReceiver() {
 
+    /**
+     * Receives alarm trigger broadcasts, constructs the notification, and displays it.
+     *
+     * @param context Context in which the receiver is running.
+     * @param intent Alarm trigger intent carrying reminder metadata extras.
+     */
     @SuppressLint("FullScreenIntentPolicy")
     override fun onReceive(context: Context, intent: Intent) {
         val notificationCode = intent.getIntExtra("notificationCode", 1001)
@@ -22,7 +34,7 @@ class ReminderReceiver : BroadcastReceiver() {
         val isPreviousDay = intent.getBooleanExtra("isPreviousDay", false)
 
         val notificationManager = context.getSystemService(NotificationManager::class.java)
-        
+
         // Ensure channel exists
         val channel = NotificationChannel(
             NOTIFICATION_CHANNEL_ID, context.getString(R.string.channel_name),
@@ -60,7 +72,7 @@ class ReminderReceiver : BroadcastReceiver() {
         val displayDate = Calendar.getInstance().apply {
             if (isPreviousDay) add(Calendar.DATE, 2)
         }.time
-        
+
         val currentTime = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(displayDate)
 
         val title = if (isPreviousDay) {
@@ -90,8 +102,20 @@ class ReminderReceiver : BroadcastReceiver() {
     }
 }
 
+/**
+ * [BroadcastReceiver] invoked when the user dismisses a reminder notification.
+ *
+ * Ensures alarm playback stops when the notification card is dismissed.
+ */
 class NotificationDismissReceiver : BroadcastReceiver() {
+    /**
+     * Receives notification dismissal broadcasts and stops alarm audio playback.
+     *
+     * @param context Receiver context.
+     * @param intent Dismiss intent.
+     */
     override fun onReceive(context: Context, intent: Intent?) {
         AlarmSoundManager.stopAlarm()
     }
 }
+
