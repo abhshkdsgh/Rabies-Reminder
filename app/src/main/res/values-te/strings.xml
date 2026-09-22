@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">రేబీస్ రిమైండర్</string>
+    <string name="are_you_sure_that_you_want_to_exit">మీరు ఖచ్చితంగా బయటికి వెళ్లాలని అనుకుంటున్నారా?</string>
+    <string name="yes">అవును</string>
+    <string name="no">కాదు</string>
+    <string name="force_light_mode">లైట్ మోడ్‌కి మార్చు</string>
+    <string name="follow_system_colour_mode">సిస్టమ్ కలర్ మోడ్‌ను ఫాలో అవ్వండి</string>
+    <string name="force_dark_mode">డార్క్ మోడ్‌కి మార్చు</string>
+    <string name="change_font_size">అక్షరాల పరిమాణం మార్చండి</string>
+    <string name="current_font_size">ప్రస్తుత అక్షరాల పరిమాణం: %1$d</string>
+    <string name="a_minus">A-</string>
+    <string name="a">A</string>
+    <string name="a_plus">A+</string>
+    <string name="new_reminder">కొత్త రిమైండర్‌</string>
+    <string name="about_rabies">రేబీస్ గురించి</string>
+    <string name="delete_all">అన్నీ తొలగించు</string>
+    <string name="delete">తొలగించు</string>
+    <string name="are_you_sure_you_want_to_delete_the_reminder_on">%1$s మీరు రిమైండర్‌ను ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?</string>
+    <string name="are_you_sure_you_want_to_delete_all_reminders">మీరు అన్ని రిమైండర్లను ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?</string>
+    <string name="cancel">రద్దు చేయు
+</string>
+    <string name="please_select">దయచేసి ఎంచుకోండి</string>
+    <string name="anti_rabies_post_exposure_prophylaxis_intra_dermal">రేబీస్ నిరోధక టీకా (పోస్ట్ ఎక్స్‌పోజర్) - చర్మంలో ఇంజెక్షన్</string>
+    <string name="anti_rabies_post_exposure_prophylaxis_intra_muscular">రేబీస్ నిరోధక టీకా (పోస్ట్ ఎక్స్‌పోజర్) - కండరాల్లో ఇంజెక్షన్</string>
+    <string name="please_enable_notification_permission_and_exact_alarm_permission_to_set_reminders">రిమైండర్‌లు పనిచేయడానికి నోటిఫికేషన్ మరియు అలారం అనుమతులు ఆన్ చేయండి</string>
+    <string name="request_exact_alarm_permission">అలారం అనుమతి అడగండి</string>
+    <string name="alarm_permission_is_enabled">అలారం అనుమతి ఆన్‌లో ఉంది</string>
+    <string name="request_notification_permission">నోటిఫికేషన్ అనుమతి అడగండి</string>
+    <string name="notifications_are_enabled">నోటిఫికేషన్లు ఆన్‌లో ఉన్నాయి</string>
+    <string name="refresh">రిఫ్రెష్ చేయండి</string>
+    <string name="ok">సరే</string>
+    <string name="on_injection_day_at_7_am">ఇంజెక్షన్ వేయించుకునే రోజు ఉదయం 7 గంటలకు</string>
+    <string name="on_the_previous_day_at_9_am">మునుపటి రోజు ఉదయం 9 గంటలకు</string>
+    <string name="_0th_day">0వ రోజు</string>
+    <string name="_3rd_day">3వ రోజు</string>
+    <string name="_7th_day">7వ రోజు</string>
+    <string name="_28th_day">28వ రోజు</string>
+    <string name="confirm_schedule">వివరాల పట్టికను నిర్ధారించండి</string>
+    <string name="_14th_day">14వ రోజు</string>
+    <string name="rabies_awareness">🐾 రేబీస్ అవగాహన</string>
+    <string name="what_is_rabies">రేబీస్ అంటే ఏమిటి?</string>
+    <string name="rabies_is_a_deadly_viral_disease_that_attacks_the_brain_and_nerves">రేబేస్ అనేది ప్రాణాంతకమయిన వైరస్ చే సంక్రమించే వ్యాధి. ఇది మెదడు, నరాలను దెబ్బతీస్తుంది.</string>
+    <string name="once_symptoms_appear_it_is_almost_always_fatal_but_timely_treatment_can_prevent_it">లక్షణాలు ఒకసారి మొదలైతే దాదాపు ప్రాణాన్ని తీస్తుంది,కానీ సమయానికి చికిత్స తీసుకుంటే ప్రాణాన్ని కాపాడుకోవచ్చు.</string>
+    <string name="cause">కారణం</string>
+    <string name="caused_by_the_rabies_virus_found_in_the_saliva_of_infected_animals">రేబీస్ సోకిన జంతువుల లాలాజలంలో ఉండే రేబీస్ వైరస్ వల్ల వస్తుంది.</string>
+    <string name="in_india_dogs_are_the_most_common_source_but_cats_monkeys_and_wild_animals_can_also_spread_rabies">భారతదేశంలో ఎక్కువగా కుక్కలు వల్ల రేబీస్ వస్తుంది, కానీ పిల్లులు, కోతులు, అడవి జంతువులు వల్ల కూడా రావచ్చు.</string>
+    <string name="how_people_get_infected">మనుషులకు ఎలా సోకుతుంది?</string>
+    <string name="bite_or_scratch_from_a_rabid_animal">• రేబీస్ సోకిన జంతువు కొరుకడం లేదా గీరడం వల్ల రేబీస్ వ్యాపిస్తుంది
+</string>
+    <string name="saliva_or_lick_on_broken_skin_or_eyes_mouth_or_nose">• లాలాజలం పగిలిన చర్మం లేదా కళ్లలో, నోరు, ముక్కులోకి చేరితే రేబీస్ వ్యాపిస్తుంది
+</string>
+    <string name="handling_infected_animals_without_protection">• రేబీస్ వ్యాధి ఉన్న జంతువులను (గ్లవ్స్, మాస్క్ వంటి) రక్షణ చర్యలు లేకుండా చేతులతో తాకడం / పట్టుకోవడం </string>
+    <string name="signs_of_rabid_animals">రేబీస్ ఉన్న జంతువుల లక్షణాలు</string>
+    <string name="unusual_aggression_or_excessive_drooling">• అసాధారణమైన దాడి స్వభావం లేదా నోటి నుంచి లాలాజలం కారడం
+</string>
+    <string name="difficulty_walking_biting_objects_or_sudden_behavior_changes">• నడవడంలో ఇబ్బంది, వస్తువులను కొరికే స్వభావం లేదా అకస్మాత్తుగా ప్రవర్తనలో మార్పులు రావడం
+</string>
+    <string name="even_healthy_looking_animals_can_carry_rabies_always_treat_bites_seriously">• బయటకు ఆరోగ్యంగా కనిపించినా కూడా జంతువులకు రేబీస్ ఉండొచ్చు, అందుకే ఏ జంతువు కాటు అయినా నిర్లక్ష్యం చేయకుండా వెంటనే జాగ్రత్తలు తీసుకోవాలి
+</string>
+    <string name="categories_of_exposure">సంపర్క స్థాయిల వర్గీకరణ</string>
+    <string name="category_i_touching_or_feeding_animals_licks_on_intact_skin_no_treatment_needed">• స్థాయి I: జంతువులను తాకడం లేదా ఆహారం పెట్టడం, గాయాలు లేని చర్మంపై నాలుకతో నాకడం – చికిత్స అవసరం లేదు
+
+</string>
+    <string name="category_ii_minor_scratches_nibbles_without_bleeding_rabies_vaccine_required">• స్థాయి II: చిన్నగా గీసినట్టు గాయం కావడం లేదా రక్తస్రావం లేకుండా స్వల్పంగా కొరకడం – రేబీస్ టీకా అవసరం
+
+</string>
+    <string name="category_iii_deep_bites_scratches_saliva_on_broken_skin_bites_on_face_neck_hands_rabies_vaccine_rabies_immunoglobulin_required">• స్థాయి III: లోతైన కాట్లు, గీతలు, గాయమైన చర్మంపై లాలాజలం పడటం, ముఖం/మెడ/చేతులపై కాట్లు → రేబీస్ టీకా మరియు రేబీస్ ఇమ్యూనోగ్లోబులిన్ అవసరం</string>
+    <string name="first_aid_act_immediately">ప్రథమ చికిత్స: వెంటనే చర్యలు తీసుకోండి</string>
+    <string name="_1_wash_the_wound_with_plenty_of_soap_and_running_water_for_at_least_15_minutes">1. గాయాన్ని కనీసం 15 నిమిషాల పాటు సబ్బు మరియు ట్యాప్ నుంచి ప్రవహించే నీటితో బాగా కడగాలి.
+</string>
+    <string name="_2_apply_antiseptic_povidone_iodine_or_alcohol_based">2. గాయంపై పోవిడోన్ అయోడిన్ లేదా ఆల్కహాల్ ఆధారిత యాంటీసెప్టిక్‌ను రాయాలి.
+</string>
+    <string name="_3_do_not_apply_irritants_chili_turmeric_oils_or_cover_tightly">3. మిర్చి, పసుపు, నూనెల వంటి పదార్థాలను గాయంపై వేయకూడదు మరియు గాయాన్ని గట్టిగా కట్టకూడదు.
+</string>
+    <string name="_4_visit_the_nearest_hospital_or_anti_rabies_clinic_immediately">4. వెంటనే దగ్గరలోని ఆసుపత్రి లేదా రేబీస్ చికిత్స కేంద్రానికి వెళ్లాలి.</string>
+    <string name="treatment_schedule">చికిత్స వివరాల పట్టిక</string>
+    <string name="rabies_vaccination_pep_day_0_3_7_28_day_0_first_injection_intradermal_or_day_0_3_7_14_28_day_0_first_injection_intramuscular">• రేబీస్ టీకా (PEP): 0, 3, 7, 28 రోజులు (0వ రోజు = మొదటి ఇంజెక్షన్, చర్మంలో ఇవ్వడం) లేదా 0, 3, 7, 14, 28 రోజులు (0వ రోజు = మొదటి ఇంజెక్షన్, కండరంలో ఇవ్వడం)
+
+</string>
+    <string name="rabies_immunoglobulin_rig_for_severe_category_iii_bites_injected_into_and_around_the_wound_as_soon_as_possible">• తీవ్రమైన కేటగిరీ III కాట్లకు రేబీస్ ఇమ్యూనోగ్లోబులిన్ (RIG)ను గాయం లోపల మరియు చుట్టూతా వీలైనంత త్వరగా ఇంజెక్షన్ ఇవ్వాలి
+
+</string>
+    <string name="tetanus_injection_may_also_be_required">• టెటనస్ ఇంజెక్షన్ కూడా అవసరం కావచ్చు
+
+</string>
+    <string name="complete_all_doses_even_if_the_wound_heals_or_the_animal_appears_healthy">గాయం మానిపోయినా లేదా జంతువు ఆరోగ్యంగా కనిపించినా టీకా డోసులన్నీ పూర్తిగా వేయించుకోవాలి.</string>
+    <string name="prevention">నివారణ</string>
+    <string name="vaccinate_pets_regularly">• మీ పెంపుడు జంతువులకు టీకా క్రమం తప్పకుండా వేయించండి
+</string>
+    <string name="avoid_contact_with_unknown_animals">• తెలియని జంతువులతో దూరంగా ఉండండి
+</string>
+    <string name="report_stray_dogs_to_local_authorities">• వీధి కుక్కలు కనిపిస్తే స్థానిక అధికారులకు తెలియజేయాలి
+</string>
+    <string name="educate_children_about_animal_bite_safety">• జంతువుల కాట్ల నుండి రక్షణ గురించి పిల్లలకు అవగాహన కల్పించాలి</string>
+    <string name="remember">గుర్తుంచుకోండి</string>
+    <string name="rabies_is_100_preventable_if_treated_early">• రేబీస్‌ను ముందుగానే చికిత్స తీసుకుంటే 100% పూర్తిగా నివారించవచ్చు
+</string>
+    <string name="wash_the_wound_immediately">• గాయాన్ని వెంటనే కడగండి
+</string>
+    <string name="do_not_wait_for_symptoms_rabies_is_almost_always_fatal_after_onset">• లక్షణాలు వచ్చే వరకు ఆగకండి; రేబీస్ లక్షణాలు మొదలైన తర్వాత ఇది చాలా ప్రమాదకరంగా మారి ప్రాణాంతకమవుతుంది
+</string>
+    <string name="keep_contact_numbers_of_anti_rabies_vaccine_clinics_handy">• రేబీస్ నిరోధక టీకా క్లినిక్ ఫోన్ నంబర్లను దగ్గర ఉంచుకోండి</string>
+    <string name="please_enable_notifications_to_use_the_reminder">రిమైండర్లు పనిచేయడానికి నోటిఫికేషన్లు ఆన్ చేయండి</string>
+    <string name="change_language">"భాష మార్చండి : "</string>
+    <string name="channel_name">రిమైండర్ నోటిఫికేషన్‌లు</string>
+    <string name="channel_description"> రేబీస్ కాటు తర్వాత ఇచ్చే నివారణ చికిత్స (PEP, పీఈపీ)- రేబీస్ నిరోధక టీకా ఇంజెక్షన్‌ల కోసం రిమైండర్‌లను పొందండి</string>
+    <string name="about">గురించి</string>
+    <string name="menu">మెను</string>
+    <string name="rabies_information_sheet">రేబీస్ సమాచార పత్రం</string>
+    <string name="go_back_to_home_screen">హోమ్ స్క్రీన్‌కు తిరిగి వెళ్లండి</string>
+    <string name="exit_alert">నిష్క్రమణ హెచ్చరిక</string>
+    <string name="upcoming_entries">రాబోయే ఎంట్రీలు</string>
+    <string name="all_entries">అన్ని ఎంట్రీలు</string>
+    <string name="filter">వడపోత</string>
+    <string name="are_you_sure">మీరు ఖచ్చితంగా ఉన్నారా?</string>
+    <string name="are_you_sure_you_want_to_confirm_this_schedule">మీరు ఈ వివరాల పట్టికను (షెడ్యూల్‌ను) నిర్ధారించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
+    <string name="welcome_to_rabies_reminder">రేబీస్ రిమైండర్‌కు స్వాగతం</string>
+    <string name="create_and_manage_post_exposure_schedules_quickly_and_reliably">రేబీస్ కాటు తర్వాత ఇచ్చే నివారణ చికిత్స (PEP) షెడ్యూల్‌లను వేగంగా మరియు నమ్మదగిన విధంగా తయారు చేసి నిర్వహించండి</string>
+    <string name="no_reminders_yet">ఇంకా రిమైండర్‌లు లేవు</string>
+    <string name="create_a_schedule_to_start_receiving_reminders">రిమైండర్లు పొందడం ప్రారంభించేందుకు షెడ్యూల్‌ను రూపొందించండి.</string>
+    <string name="create_schedule">షెడ్యూల్‌ను సృష్టించండి</string>
+    <string name="in_2_days">" 2 రోజుల్లో!"</string>
+    <string name="today">" ఈ రోజు!"</string>
+    <string name="schedule_type">షెడ్యూల్ టైపు</string>
+    <string name="start_date">ప్రారంభ తేదీ : %s</string>
+    <string name="two_days_before_at_9_am">రెండు రోజుల ముందు ఉదయం 9 గంటలకు</string>
+    <string name="reminder_sentence">%1$s – %2$s మోతాదు %3$s</string>
+    <string name="reminders">రిమైండర్‌లు</string>
+    <string name="get_injected_today">ఈ రోజే టీకా వేయించుకోండి!</string>
+    <string name="injection_reminder">టీకా రిమైండర్</string>
+    <string name="dont_forget_your_dose">%2$sన మీ %1$s డోస్‌ని మర్చిపోకండి!</string>
+    <string name="time_for_dose_today">ఈ రోజు (%2$s) మీ %1$s డోస్ తీసుకోవాల్సిన సమయం!</string>
+</resources>
