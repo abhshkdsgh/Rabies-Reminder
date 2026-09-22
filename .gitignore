@@ -1,0 +1,41 @@
+# Local configuration file (contains local Android SDK path)
+local.properties
+
+# Build outputs & generated artifacts
+*.apk
+*.aab
+*.aar
+*.dex
+*.class
+/build/
+/.gradle/
+/.kotlin/
+/app/build/
+/app/release/
+/release/
+/bin/
+/gen/
+/out/
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Signing keystores & credentials
+*.jks
+*.keystore
+*.pem
+*.key
+*.pk8
+*.p12
+google-services.json
+GoogleService-Info.plist
+secrets.properties
