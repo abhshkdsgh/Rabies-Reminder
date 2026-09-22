@@ -39,6 +39,9 @@ fun CreditsPage(
         MgText(
             text = """
                 THIS IS AN OPEN SOURCE PROJECT CREATED BY Dr ABHISHEK DAS G H.
+                
+                LICENSED UNDER GNU GENERAL PUBLIC LICENSE v3.0 (GPL-3.0).
+                NON-COMMERCIAL USE ONLY - NOT FOR MONETIZATION.
             """.trimIndent(),
             basicFontSize= basicFontSize
         )
